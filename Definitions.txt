@@ -1,0 +1,16 @@
+#ACCURACY -----------> 71.5  (143/200)
+
+
+#Tokenization means that parsing your text into a list of words. Basically, it helps in other pre-processing steps,
+#such as Removing stop words which is our next point.
+            
+#stopwords should be removed from the text data, these words are commonly occurring words in text data, 
+#for example, is, am, are and so on.
+
+#One of the most important steps is converting words into lower case. This will reduce duplicate copies of 
+#the same word if they are in different cases.
+            
+#Lemmatization removes the inflectional endings of the word by using the vocabulary and morphological analysis
+#of words.
+
+#Bag of words has disadvt like all words have same importance which is not good for the accuracy and no semantic of the word is preserved i.e., meaning of the word is not preserved

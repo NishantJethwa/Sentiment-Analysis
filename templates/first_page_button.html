@@ -1,0 +1,40 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/text.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/stylehome.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/javascrpt.js') }}"></script>
+    <style media="screen">
+    .box {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 750% 750%;
+            animation: gradient 15s ease infinite;
+            }
+            
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+}   
+    </style>
+</head>
+
+<body>
+<div class="box"  id="gradient">
+ <img src="{{url_for('static', filename='images/logo2.png')}}" />
+ <div class="wrapper enter_site">
+  <a href="{{ url_for('home2') }}" class="button">Write Review</a>
+</div>
+</div>
+</body>
+</html>
+
+url_for in Flask is used for creating a URL to prevent the overhead of having to change 
+URLs throughout an application (including in templates). Without url_for, 
+if there is a change in the root URL of your app then you have to change it in every page where the link is present.

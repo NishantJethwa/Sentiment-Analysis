@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style media="screen">
+    @import 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&subset=cyrillic,cyrillic-ext,latin-ext';
+    button {
+      color:#454545;background:transparent;
+      border-width:2px;border-style: solid;
+      border-color: #454545;
+      position:relative;
+      margin:1em;
+      display:inline-block;
+      padding:0.5em 1em;
+      transition:all 0.3s ease-in-out;
+      text-align:center;
+      font-family:comfortaa;font-weight:bold
+    }
+    button:before, button:after {
+      content:'';
+      display:block;
+      position:absolute;
+      border-color:#454545;
+      box-sizing:border-box;
+      border-style:solid;
+      width:1em;
+      height:1em;
+      transition:all 0.3s ease-in-out
+    }
+    button:before {
+      top:-6px;
+      left:-6px;
+      border-width:2px 0 0 2px;
+      z-index:5;
+    }
+    button:after {
+      bottom:-6px;
+      right:-6px;
+      border-width:0 2px 2px 0;
+    }
+button:hover:before, button:hover:after {width:calc(100% + 12px);
+  height:calc(100% + 12px);border-color:#fff}
+button:hover {color:#353535;background-color:#fff;border-color:#fff}
+.panel {max-width:960px;text-align:center;position:relative;margin:auto;}
+    .pink button {
+      color:#3bb4e5;
+      border-color:#3bb4e5
+    }
+    .pink button:before, .pink button:after  {
+      border-color:#3bb4e5
+    }
+    .pink button:hover:before, .pink button:hover:after {
+      border-color:#3bb4e5;
+    }
+    .pink button:hover {
+      color:#fff;background-color:#3bb4e5;border-color:#3bb4e5;
+    }
+    .pink .panel {
+      max-width:960px;text-align:center;position:relative;margin:auto;
+    }
+
+    .box {
+           background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+           background-size: 750% 750%;
+           animation: gradient 15s ease infinite;
+           }
+
+           @keyframes gradient {
+               0% {
+                   background-position: 0% 50%;
+               }
+               50% {
+                   background-position: 100% 50%;
+               }
+               100% {
+                   background-position: 0% 50%;
+               }
+}
+
+
+    </style>
+  </head>
+  <body class="box"  id="gradient">
+  <div class="container d-flex justify-content-center" style="margin-top: 270px;">
+  <form action="neg">
+    <div class="card text-white" style="width: 600px; background-color: transparent;">
+      <img src="{{url_for('static', filename='images/envelpoe_final-01.png')}}" class="card-img" alt="" width="">
+      <div class="card-img-overlay d-flex">
+        <div class="panel pink align-self-center mb-4">
+             {% if value == 'Negative' %}
+            <button href="{{ url_for('homeee2') }}">See Result</button>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
